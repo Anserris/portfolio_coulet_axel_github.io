@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Portfolio Professionnel</title>
+    <style>
+        /* --- DESIGN GÉNÉRAL (CSS) --- */
+        :root {
+            --primary-color: #2563eb; /* Bleu professionnel */
+            --bg-color: #f8fafc;
+            --text-color: #1e293b;
+            --card-bg: #ffffff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            line-height: 1.6;
+        }
+
+        /* --- NAVIGATION --- */
+        nav {
+            background: #fff;
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+        nav a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: bold;
+        }
+        nav a:hover { color: var(--primary-color); }
+
+        /* --- HEADER / HERO --- */
+        header {
+            text-align: center;
+            padding: 5rem 1rem;
+            background: linear-gradient(135deg, #e0e7ff 0%, #f8fafc 100%);
+        }
+        h1 { font-size: 2.5rem; margin-bottom: 0.5rem; color: var(--primary-color); }
+        .subtitle { font-size: 1.2rem; color: #64748b; }
+
+        /* --- SECTIONS --- */
+        section {
+            padding: 4rem 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        h2 { border-bottom: 3px solid var(--primary-color); display: inline-block; margin-bottom: 2rem; }
+
+        /* --- GRILLE DES PROJETS --- */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        .project-card {
+            background: var(--card-bg);
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.2s;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+        }
+        .btn {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.5rem 1rem;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background: #1e293b;
+            color: white;
+            margin-top: 2rem;
+        }
+        footer a { color: #93c5fd; text-decoration: none; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div style="font-weight:bold; font-size:1.2rem;">Mon Portfolio</div>
+        <ul>
+            <li><a href="#about">À propos</a></li>
+            <li><a href="#projects">Réalisations</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>Prénom Nom</h1> 
+        <p class="subtitle">Développeur Web / Chef de Projet / Designer</p>
+        <p>Je transforme des idées complexes en solutions digitales efficaces.</p>
+    </header>
+
+    <section id="about">
+        <h2>À propos de moi</h2>
+        <p>
+            Bienvenue sur mon portfolio. Passionné par [Votre Domaine], j'ai acquis une expérience solide en [Compétence 1] et [Compétence 2].
+            Mon objectif est de mettre mes compétences au service de projets ambitieux. Ce portfolio retrace mon parcours et mes réalisations concrètes.
+        </p>
+    </section>
+
+    <section id="projects">
+        <h2>Mes Réalisations</h2>
+        <div class="projects-grid">
+            
+            <article class="project-card">
+                <h3>Nom du Projet 1</h3>
+                <p>Une brève description du projet. Quel était le problème ? Quelle solution avez-vous apportée ?</p>
+                <p><strong>Technologies :</strong> HTML, CSS, GitHub</p>
+                <a href="#" class="btn">Voir le projet</a>
+            </article>
+
+            <article class="project-card">
+                <h3>Nom du Projet 2</h3>
+                <p>Description de votre seconde réalisation majeure. Mettez en avant les résultats obtenus.</p>
+                <p><strong>Technologies :</strong> Python, Data Analysis</p>
+                <a href="#" class="btn">Voir le projet</a>
+            </article>
+
+             <article class="project-card">
+                <h3>Projet en cours...</h3>
+                <p>Espace réservé pour vos futures créations. Ce portfolio est évolutif !</p>
+                <a href="#" class="btn">À venir</a>
+            </article>
+
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Mon profil vous intéresse ? N'hésitez pas à me contacter pour échanger sur vos projets.</p>
+        <p>
+            📧 Email : <a href="mailto:votre@email.com">votre@email.com</a><br>
+            💼 LinkedIn : <a href="#">Lien vers votre profil</a>
+        </p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Prénom Nom. Hébergé sur GitHub Pages.</p>
+    </footer>
+
+</body>
+</html>
