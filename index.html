@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon Portfolio Professionnel</title>
+    <title>Axel Coulet | Portfolio</title>
     <style>
-        /* --- DESIGN GÉNÉRAL (CSS) --- */
         :root {
-            --primary-color: #2563eb; /* Bleu professionnel */
-            --bg-color: #f8fafc;
-            --text-color: #1e293b;
+            --primary-color: #0f172a; 
+            --accent-color: #3b82f6;
+            --bg-color: #f1f5f9;
+            --text-color: #334155;
             --card-bg: #ffffff;
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Inter', -apple-system, sans-serif;
             margin: 0;
             padding: 0;
             color: var(--text-color);
@@ -22,128 +22,175 @@
             line-height: 1.6;
         }
 
-        /* --- NAVIGATION --- */
         nav {
             background: #fff;
             padding: 1rem 2rem;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
             display: flex;
             justify-content: space-between;
             align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 20px;
-        }
-        nav a {
-            text-decoration: none;
-            color: var(--text-color);
-            font-weight: bold;
-        }
-        nav a:hover { color: var(--primary-color); }
+        nav ul { list-style: none; display: flex; gap: 20px; margin: 0; }
+        nav a { text-decoration: none; color: var(--text-color); font-weight: 500; }
+        nav a:hover { color: var(--accent-color); }
 
-        /* --- HEADER / HERO --- */
         header {
             text-align: center;
-            padding: 5rem 1rem;
-            background: linear-gradient(135deg, #e0e7ff 0%, #f8fafc 100%);
+            padding: 6rem 1rem;
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            color: white;
         }
-        h1 { font-size: 2.5rem; margin-bottom: 0.5rem; color: var(--primary-color); }
-        .subtitle { font-size: 1.2rem; color: #64748b; }
+        h1 { font-size: 3rem; margin-bottom: 0.5rem; letter-spacing: -1px; }
+        .subtitle { font-size: 1.4rem; color: #94a3b8; font-weight: 300; }
 
-        /* --- SECTIONS --- */
         section {
-            padding: 4rem 2rem;
-            max-width: 1000px;
+            padding: 5rem 2rem;
+            max-width: 1100px;
             margin: 0 auto;
         }
-        h2 { border-bottom: 3px solid var(--primary-color); display: inline-block; margin-bottom: 2rem; }
+        h2 { 
+            font-size: 2rem;
+            border-bottom: 4px solid var(--accent-color); 
+            display: inline-block; 
+            margin-bottom: 3rem; 
+            color: var(--primary-color);
+        }
 
-        /* --- GRILLE DES PROJETS --- */
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
         }
         .project-card {
             background: var(--card-bg);
-            border-radius: 8px;
-            padding: 1.5rem;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            transition: transform 0.2s;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+            border: 1px solid #e2e8f0;
         }
-        .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+        .project-card h3 { 
+            margin-top: 0; 
+            color: var(--accent-color);
+            font-size: 1.4rem;
         }
-        .btn {
-            display: inline-block;
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
             margin-top: 1rem;
-            padding: 0.5rem 1rem;
-            background-color: var(--primary-color);
-            color: white;
-            text-decoration: none;
-            border-radius: 4px;
+        }
+        .tag {
+            background: #eff6ff;
+            color: #1d4ed8;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
         }
 
-        /* --- FOOTER --- */
+        .contact-container {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            max-width: 600px;
+        }
+
+        .contact-links a { 
+            display: inline-block;
+            background: var(--accent-color);
+            color: white;
+            text-decoration: none; 
+            padding: 10px 20px;
+            border-radius: 8px;
+            margin: 10px 10px 10px 0;
+            font-weight: bold; 
+            transition: opacity 0.2s;
+        }
+        .contact-links a:hover { opacity: 0.9; }
+
         footer {
             text-align: center;
-            padding: 2rem;
-            background: #1e293b;
-            color: white;
-            margin-top: 2rem;
+            padding: 4rem 2rem;
+            background: #0f172a;
+            color: #94a3b8;
         }
-        footer a { color: #93c5fd; text-decoration: none; }
     </style>
 </head>
 <body>
 
     <nav>
-        <div style="font-weight:bold; font-size:1.2rem;">Mon Portfolio</div>
+        <div style="font-weight:bold; font-size:1.2rem; color: var(--primary-color);">AXEL COULET</div>
         <ul>
             <li><a href="#about">À propos</a></li>
-            <li><a href="#projects">Réalisations</a></li>
+            <li><a href="#projects">Projets</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 
     <header>
-        <h1>Coulet Axel</h1> 
-        <p class="subtitle">Elève ingénieur 4A</p>
-        <!-- <p>Je transforme des idées complexes en solutions digitales efficaces.</p> -->
+        <h1>Axel Coulet</h1>
+        <p class="subtitle">Ingénierie & Développement Logiciel</p>
     </header>
 
     <section id="about">
-        <h2>À propos de moi</h2>
-        <p>
-            Je souhaite résoudre des problèmes d'ingénierie grâce à mes connaissances en étant déterminé à acquérir de nouvelles compétences pour optimiser les solutions proposées.
+        <h2>À propos</h2>
+        <p style="font-size: 1.2rem; max-width: 800px;">
+            Passionné par la résolution de problèmes complexes et les technologies innovantes, 
+            mon parcours s'articule autour de l'intelligence artificielle, du développement logiciel 
+            et des systèmes autonomes. Voici un aperçu de mes réalisations techniques.
         </p>
     </section>
 
     <section id="projects">
-        <h2>Mes Réalisations</h2>
+        <h2>Projets Phares</h2>
         <div class="projects-grid">
             
             <article class="project-card">
-                <h3>Nom du Projet 1</h3>
-                <p>Une brève description du projet. Quel était le problème ? Quelle solution avez-vous apportée ?</p>
-                <p><strong>Technologies :</strong> HTML, CSS, GitHub</p>
-                <a href="#" class="btn">Voir le projet</a>
+                <h3>Robotique Autonome</h3>
+                <p>Conception et programmation d'un mini-robot capable de naviguer de manière autonome.</p>
+                <ul style="padding-left: 20px;">
+                    <li>Navigation dans un circuit par détection ultrason.</li>
+                    <li>Suivi de ligne précis via capteurs infrarouges.</li>
+                </ul>
+                <div class="tech-tags">
+                    <span class="tag">Arduino</span>
+                    <span class="tag">C++</span>
+                    <span class="tag">Capteurs</span>
+                </div>
             </article>
 
             <article class="project-card">
-                <h3>Nom du Projet 2</h3>
-                <p>Description de votre seconde réalisation majeure. Mettez en avant les résultats obtenus.</p>
-                <p><strong>Technologies :</strong> Python, Data Analysis</p>
-                <a href="#" class="btn">Voir le projet</a>
+                <h3>Solveur Sokoban (IA)</h3>
+                <p>Développement d'un solveur autonome basé sur l'algorithme A* et la recherche heuristique.</p>
+                <ul style="padding-left: 20px;">
+                    <li>Implémentation de la gestion des états et détection de collisions.</li>
+                    <li>Réduction de l'espace de recherche via détection de deadlocks.</li>
+                    <li>Ajustement des heuristiques pour l'optimisation des performances.</li>
+                </ul>
+                <div class="tech-tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">Algorithme A*</span>
+                    <span class="tag">IA</span>
+                </div>
             </article>
 
-             <article class="project-card">
-                <h3>Projet en cours...</h3>
-                <p>Espace réservé pour vos futures créations. Ce portfolio est évolutif !</p>
-                <a href="#" class="btn">À venir</a>
+            <article class="project-card">
+                <h3>Classification d'Images</h3>
+                <p>Utilisation du Transfer Learning pour la reconnaissance d'images complexe.</p>
+                <ul style="padding-left: 20px;">
+                    <li>Adaptation de l'architecture MobileNetV2 (Feature Extraction).</li>
+                    <li>Prétraitement des données et tuning du modèle (optimiseur SGD).</li>
+                    <li>Analyse de performance et visualisation des résultats.</li>
+                </ul>
+                <div class="tech-tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">Deep Learning</span>
+                    <span class="tag">MobileNetV2</span>
+                </div>
             </article>
 
         </div>
@@ -151,15 +198,18 @@
 
     <section id="contact">
         <h2>Contact</h2>
-        <p>Mon profil vous intéresse ? N'hésitez pas à me contacter pour échanger sur vos projets.</p>
-        <p>
-            📧 Email : <a href="mailto:votre@email.com">votre@email.com</a><br>
-            💼 LinkedIn : <a href="#">Lien vers votre profil</a>
-        </p>
+        <div class="contact-container">
+            <p>Mon profil vous intéresse ? N'hésitez pas à me contacter pour échanger sur vos projets ou une future collaboration.</p>
+            <div class="contact-links">
+                <a href="mailto:coulet@et.esiea.fr">📧 coulet@et.esiea.fr</a>
+                <a href="https://www.linkedin.com/in/axel-coulet-aclt" target="_blank">🔗 LinkedIn</a>
+            </div>
+        </div>
     </section>
 
     <footer>
-        <p>&copy; 2024 Prénom Nom. Hébergé sur GitHub Pages.</p>
+        <p>Axel Coulet - 2025</p>
+        <p>Étudiant à l'ESIEA | Passionné de Technologie</p>
     </footer>
 
 </body>
